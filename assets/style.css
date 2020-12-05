@@ -1,0 +1,627 @@
+/*
+     Project    : Deepak Kumar Portfolio Site
+     Description: This is my personal Portfolio Site Built using HTML/CSS, JavaScript, jQuery - Visit https://www.deepakplay.com
+     Created by : K. Deepak Kumar
+     Contact at : deepakplay14@gmail.com
+*/
+
+*{
+    margin:0px;
+    border:0px;
+    padding:0px;
+    outline:none;
+    box-sizing: border-box;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color:#333;
+}
+
+a{
+    color: rgb(53, 17, 255);
+}
+
+a:hover,a:active{
+    color:rgba(255,53, 17);
+}
+
+.page{
+    width: 100%;
+    height: auto;
+    padding:80px 0;
+}
+
+.header_page{
+    height: 100vh;
+}
+header{
+    padding-top:40px !important;
+}
+
+.header{
+    width:100%;
+    position: relative;
+    height: 50vh;
+    z-index: 1;
+    padding-top:40px;
+    background: linear-gradient(to bottom, rgb(90, 0, 255), rgb(110, 0, 255));
+}
+
+.header::after{
+    position: absolute;
+    bottom:-9vh;
+    z-index: 1;
+    left:0;
+    width:100%;
+    height: 10vh;
+    content:'';
+    background: linear-gradient(to bottom, rgb(110, 0, 255), rgb(130, 0, 255));
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.header nav{
+    width:100%;
+    padding:30px;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 10;
+    background-color: rgb(90, 0, 255);
+    display:flex;
+}
+
+.nav_scroll{
+    padding:20px 30px!important;
+    background-color: rgb(255, 255, 255) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.nav_scroll a{
+    color:#555 !important;
+}
+
+.nav_scroll a:hover{
+    color:#000 !important;
+}
+
+.nav_scroll a::after, .nav_scroll a.active::after{
+    background-color: rgb(55, 0, 255)!important;
+}
+
+.header nav ul{
+    margin-left:auto;
+    margin-right: 30px;
+}
+
+.header nav ul li{
+    display:inline-block;
+}
+
+.header nav ul li a{
+    color:#EEE;
+    padding:12px 15px;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size:1rem;
+    position: relative;
+    
+}
+
+.header nav ul li a::after, .header nav ul li a.active::after{
+    content:"";
+    width:0%;
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    height:2px;
+    border-radius: 2px;
+    background-color: #FFF;
+    transform:translateX(-50%);
+}
+
+.header nav ul li a:hover, .header nav ul li a.active{
+    transition: .2s;
+    color:#FFF;
+}
+
+
+.header nav ul li a:hover::after, .header nav ul li a.active::after{
+    transition: all .2s ease;
+    width:68%;
+}
+
+.nav_mobile{
+    color:#FFF;
+    font-size:1.4rem;
+    cursor: pointer;
+    display: none;
+    margin-left:auto;
+}
+
+.about_me_intro{
+    color:#FFF;
+    z-index: 2;
+    position: relative;
+    max-width:400px;
+    left: 50%;
+    top:55%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+}
+
+.about_me_intro img{
+    width: 150px;
+    height: 150px;
+    vertical-align: middle;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0,0,0,.20);
+    margin: 20px 0 10px;
+    position: relative;
+}
+
+.about_me_intro h1{
+    font-size:2rem;
+}
+
+.about_me_intro p{
+    margin-top:8px;
+    padding:0 30px;
+    font-size: 1rem;
+}
+
+.about_me_intro .location{
+    margin-top:30px;
+    font-size: 1rem;
+    display:inline-block;
+}
+
+.about_me_intro .location i{
+    margin-right:8px;
+}
+.front_buttons{
+    position: absolute;
+    top:70vh;
+    left:50%;
+    transform: translateX(-50%);
+    width:320px;
+    text-align:center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size:1rem;
+    font-weight: normal;
+    
+}
+
+.cv_get{
+    background-color: rgb(100, 0, 255);
+    color:#FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.visit_github{
+    color:rgb(90, 0, 255);
+    background-color: #FFF;
+    font-weight:bold;
+    border:1px solid rgb(90, 0, 255);
+}
+
+.visit_github:hover{
+    color:rgb(90, 0, 255);
+    transition: all .3s ease;
+    box-shadow: 0 0 10px rgb(89, 0, 255);
+}
+
+
+.cv_get:hover{
+    color:#FFF;
+    transition: all .3s ease;
+    background-color: rgb(106, 26, 255);
+    box-shadow: 0 0 5px rgb(110, 26, 255);
+}
+
+.page_nav{
+    position: fixed;
+    right:30px;
+    bottom:30px;
+    display:flex;
+    flex-direction:column;
+}
+
+.page_nav .top, .page_nav .bottom{
+    width:40px;
+    height:40px;
+    padding:10px;
+    color: rgb(110, 32, 255);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.6);
+    border-radius:50%;
+    margin: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+h2{
+    font-size:2.2rem;
+    text-align:center;
+    color: rgb(106, 26, 255);
+    position: relative;
+    padding:30px 0;
+}
+
+h3{
+    color: rgb(106, 26, 255);
+}
+
+h2::after{
+    content:'';
+    width:85%;
+    position: absolute;
+    height: 3px;
+    bottom:20px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: rgb(106, 26, 255);
+}
+
+.section_container{
+    margin:20px auto 0;
+    max-width:900px;
+    padding:10px 20px 80px;
+    display:flex;
+    font-size:1.1rem;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    
+    background-color: #FFF;
+    box-shadow:0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.about_me .container{
+    display:flex;
+}
+
+.about_me .container>*{
+    padding:20px 40px;
+    font-weight: 400;
+    color:#444;
+}
+
+.about_me .container p{
+    flex:.9;
+    font-size:1.2rem;
+    margin-right: 60px;
+    align-self: center;
+}
+
+.about_me .container p span{
+    display:block;
+    margin:10px 0;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.about_me .container .my_skills{
+    flex:1;
+}
+
+.about_me .container .my_skills ul{
+    padding-left: 10px;
+}
+
+.about_me .container .my_skills li{
+    padding:10px 10px 5px;
+    margin: 3px;
+    font-size: 1rem;
+}
+
+.icon_style{
+    color:rgb(105, 79, 255);
+    margin-right:6px;
+    display: inline-block;
+    width:20px;
+}
+
+.my_portfolio{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.my_portfolio div{
+    width:270px;
+    height:320px;
+    margin:20px 15px;
+    border-radius: 10px;
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.28);
+    transition: all .2s ease;
+    background-color: #FFF;
+    cursor: pointer;
+    overflow:hidden;
+}
+
+.my_portfolio div:hover{
+    transform: scale(1.025);
+    box-shadow:0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.my_portfolio div img{
+    width:100%;
+    height:50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: fill;
+}
+
+.my_portfolio div h4{
+    font-size:1.25rem;
+    text-align:center;
+    padding:8px 0;
+}
+
+.my_portfolio div p{
+    font-size:.96rem;
+    text-align:center;
+    padding:0 10px;
+}
+
+.portfolio{
+    width:1000px;
+    max-width: 80% !important;
+    font-size:1rem;
+    padding:10px 40px 80px;
+    box-shadow:0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.email_box{
+    display:flex;
+    flex-direction: column;
+    margin:40px auto;
+    max-width: 600px;
+    padding:40px;
+    box-shadow: 0 0 8px rgba(0,0,0,.4);
+    align-items: center;
+}
+
+.email_box h3{
+    color: rgb(105, 79, 255);
+    font-size:1.5rem;
+}
+
+.email_box i{
+    color: rgb(105, 79, 255);
+    font-size: 4rem;
+    display: inline-block;
+    margin: 10px auto 40px;
+}
+
+.email_box span{
+    padding:20px;
+    text-align:center;
+}
+
+.contact_section{
+    margin-bottom:100px;
+}
+
+@keyframes menu_slideIn{
+    from { right:-80%; }
+    to{ right:0; }
+}
+
+@keyframes menu_slideOut{
+    from { right:0; }
+    to{ right:-80%; }
+}
+
+@media (max-width:850px){
+    .header{
+        padding-top:110px;
+    }
+    .header nav{
+        padding:15px;
+    }
+
+    .header nav ul{
+        position: absolute;
+        background:linear-gradient(to bottom, rgb(90, 0, 255), rgb(130, 0, 255));
+        width:80%;
+        right:-80%;
+        z-index: 10;
+        margin-right:0px;
+        top:50px;
+        height:calc(100vh - 50px);
+    }
+
+    .header nav ul li{
+        display: block;
+        font-size:1rem;
+    }
+
+    .header nav ul li a{
+        width:100%;
+        padding:25px 0;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .header nav ul li a:hover, .header nav ul li a.active{
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .header nav ul li a:hover::after,  .header nav ul li a.active::after{
+        background-color:rgb(145, 65, 255);
+        height:1px;
+        width:100%;
+    }
+
+    .about_me_intro{
+        top:30%;
+    }
+
+    .about_me_intro img{
+        width: 130px;
+        height: 130px;
+    }
+    
+    .about_me_intro h1{
+        font-size:1.6rem;
+    }
+    
+    .nav_mobile{
+        display: inline-block;
+    }
+
+    .page{
+        padding-top:20px;
+        height: auto;
+    }
+
+    .page_nav{
+        right:5px;
+        bottom:20px;
+    }
+
+    .page_nav .top, .page_nav .bottom{
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.25);
+    }
+
+    .front_buttons{
+        top:66vh;
+        width:250px;
+    }
+
+    .button{
+        padding: 12px 20px;
+    }
+
+    .section_container{
+        margin:0 auto;
+        padding:30px;
+        font-size:1rem;
+        box-shadow:none;
+    }
+    
+    .about_me .container{
+        display:flex;
+        flex-direction: column;
+    }
+    
+    .about_me .container>*{
+        padding:10px;
+        font-weight: 400;
+    }
+    
+    .about_me .container p{
+        flex:1;
+        font-size:1.05rem;
+        line-height: 1.5;
+        margin-right: 0px;
+        text-align:justify;
+        padding-top:0;
+    }
+
+    .portfolio{
+        padding:10px;
+        max-width: 95% !important;
+    }
+
+    .my_portfolio div{
+        width:80%;
+        max-width: 350px;
+        height:350px;
+        margin:20px 0;
+    }
+
+    .my_portfolio div p{
+        font-size:.9rem;
+    }
+
+    .about_me .container .my_skills{
+        padding-top:20px;
+        align-self: center;
+    }
+    
+    .about_me .container .my_skills{
+        flex:1;
+    }
+    
+    .about_me .container .my_skills ul{
+        padding-left: 10px;
+    }
+
+    .about_me .container p span{
+        line-height: 1.5;
+    }
+    
+    .about_me .container .my_skills li{
+        padding:10px 10px 5px;
+        margin: 3px;
+        font-size: 1rem;
+    }
+
+    .email_box{
+        margin:30px auto;
+        width:98%;
+        padding:30px 10px;
+        box-shadow: 0 0 6px rgba(0,0,0,.35);
+        border-radius:8px;
+
+    }
+
+    .email_box i{
+        color: rgb(105, 79, 255);
+        font-size: 4rem;
+        display: inline-block;
+        margin: 10px auto 20px;
+    }
+
+    .email_box span{
+        padding:15px;
+    }
+    
+    .header::after{
+        bottom:-9vh;
+        width:100%;
+        height: 10vh;
+    }
+
+    .about_me_intro p{
+        padding:0 20px;
+        font-size:.98rem;
+    }
+
+    .about_me_intro .location{
+        font-size:.9rem;
+        margin-top:15px;
+    }
+    
+}
+
+@media (max-width:350px){
+    .button{
+        border-radius: 30px;
+        padding: 10px 15px;
+        font-size:.9rem;
+    }
+
+    .front_buttons{
+        width:220px;
+    }
+}
