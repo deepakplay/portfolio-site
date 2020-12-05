@@ -19,7 +19,7 @@ $(document).ready(function(){
     $('.visit_github').click(function(event){
         let target = $(event.target).closest('.visit_github');
         if(target.length){
-            window.open('https://github.deepakplay.com', '_blank');
+            window.open('https://github.com/deepakplay', '_blank');
         }
     });
 
