@@ -26,7 +26,7 @@ $(document).ready(function(){
     $('.cv_get').click(function(event){
         let target = $(event.target).closest('.cv_get');
         if(target.length){
-            window.open('https://www.deepakplay.com', '_blank');
+            window.open('assets/Resume.pdf', '_blank');
         }
     });
 
