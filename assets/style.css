@@ -274,7 +274,7 @@ h3{
 
 h2::after{
     content:'';
-    width:85%;
+    width:90%;
     position: absolute;
     height: 3px;
     bottom:20px;
@@ -288,7 +288,7 @@ h2::after{
     max-width:900px;
     padding:10px 20px 80px;
     display:flex;
-    font-size:1.1rem;
+    font-size:1rem;
     align-items: center;
     flex-direction: column;
     overflow-y: auto;
@@ -400,7 +400,7 @@ h2::after{
     flex-direction: column;
     margin:40px auto;
     max-width: 600px;
-    padding:40px;
+    padding: 40px;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.2);
@@ -414,9 +414,9 @@ h2::after{
 
 .email_box i{
     color: rgb(105, 79, 255);
-    font-size: 4rem;
+    font-size: 3rem;
     display: inline-block;
-    margin: 10px auto 40px;
+    margin: 10px auto 0px;
 }
 
 .email_box span{
@@ -458,6 +458,10 @@ footer{
     }
     .header nav{
         padding:15px;
+    }
+
+    h2{
+        font-size: 1.8rem;
     }
 
     .header nav ul{
@@ -604,16 +608,18 @@ footer{
         margin:30px auto;
         width:98%;
         padding:30px 10px;
-        box-shadow: 0 0 6px rgba(0,0,0,.35);
-        border-radius:8px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1),
+    0 1px 10px 0 rgba(0, 0, 0, 0.1),
+    0 3px 1px -5px rgba(0, 0, 0, 0.2);
+        border-radius:4px;
 
     }
 
     .email_box i{
         color: rgb(105, 79, 255);
-        font-size: 4rem;
+        font-size: 2rem;
         display: inline-block;
-        margin: 10px auto 20px;
+        margin: 10px auto 0px;
     }
 
     .email_box span{
