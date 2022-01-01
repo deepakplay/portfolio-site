@@ -428,6 +428,20 @@ h2::after{
     margin-bottom:100px;
 }
 
+#page_contact{
+    padding: 80px 0 0px !important;
+}
+
+footer{
+    padding: 20px 30px;
+    color: #FFF;
+    text-align: center;
+    background-color: rgb(30, 0, 197) !important;
+    box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.1),
+    0 -1px 10px 0 rgba(0, 0, 0, 0.1),
+    0 -4px 1px -5px rgba(0, 0, 0, 0.2);
+}
+
 @keyframes menu_slideIn{
     from { right:-80%; }
     to{ right:0; }

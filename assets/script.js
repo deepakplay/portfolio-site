@@ -7,6 +7,7 @@
 
 "use strict";
 $(document).ready(function(){
+    $('.current_year').text(new Date().getFullYear());
 
     //Portfolio
     $('.my_portfolio').click(function(event){
