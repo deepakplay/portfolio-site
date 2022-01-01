@@ -17,18 +17,18 @@ $(document).ready(function(){
     });
 
     $('.visit_github').click(function(event){
-        let target = $(event.target).closest('.visit_github');
-        if(target.length){
-            window.open('https://github.com/deepakplay', '_blank');
-        }
+        window.open('https://github.com/deepakplay', '_blank');
     });
 
-    $('.cv_get').click(function(event){
-        let target = $(event.target).closest('.cv_get');
-        if(target.length){
-            window.open('assets/Resume.pdf', '_blank');
-        }
+    // $('.cv_get').click(function(event){
+    //  window.open('assets/Resume.pdf', '_blank');    
+    // });
+
+    $('.linkedin_get').click(function(event){
+        window.open('https://www.linkedin.com/in/deepakplay/?originalSubdomain=in', '_blank');
     });
+
+    
 
     //Top Menu Functions
     let menuToggle = false;
